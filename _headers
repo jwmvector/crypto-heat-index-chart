@@ -1,2 +1,12 @@
 /*
-  Content-Security-Policy: frame-ancestors https://*.canva.com https://*.canva.site;
+  # Allow embedding from Canva and your public site
+  Content-Security-Policy: frame-ancestors https://connect.marketvector.com https://*.marketvector.com https://*.canva.com https://*.canva.site;
+
+  # Basic security best-practice headers
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgrade
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+/index.html
+  # Always fetch the latest chart instead of using a cached copy
+  Cache-Control: no-cache
